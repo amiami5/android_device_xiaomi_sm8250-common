@@ -528,17 +528,6 @@ service vendor.move_wifi_data /system/bin/move_wifi_data.sh
     disabled
     oneshot
 
-service wigignpt /vendor/bin/wigignpt
-    class hal
-    socket wigig/wigignpt stream 660 system wifi
-    user system
-    group wifi
-    capabilities NET_ADMIN
-    disabled
-
-on property:persist.vendor.wigig.npt.enable=1
-    start wigignpt
-
 service wifi_ftmd /system/vendor/bin/wifi_ftmd
     user system
     group system inet net_admin
