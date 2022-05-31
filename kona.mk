@@ -171,6 +171,8 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 WITH_DEXPREOPT_DEBUG_INFO := false
 
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
+
 # Display
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.composer-service
