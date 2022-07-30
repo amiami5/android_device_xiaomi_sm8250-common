@@ -54,6 +54,7 @@ vendor.wfdservice64=enable
 # Thermals
 ro.vendor.dfps.enable=false
 ro.vendor.smart_dfps.enable=false
+vendor.sys.thermal.data.path=/data/vendor/thermal/
 
 # RIL Powersaving
 persist.radio.add_power_save=1
