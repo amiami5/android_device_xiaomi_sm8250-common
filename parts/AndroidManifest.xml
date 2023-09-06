@@ -105,6 +105,12 @@
                 android:resource="@string/thermal_summary" />
         </activity>
 
+        <!-- Displayfeature color service -->
+        <service
+            android:name=".display.ColorModeService"
+            android:permission="ColorModeService">
+        </service>
+
     </application>
 
 </manifest>
