@@ -95,6 +95,9 @@ endif
 # Init
 $(call soong_config_set,libinit,vendor_init_lib,//$(COMMON_PATH):init_xiaomi_kona)
 
+# HWUI
+HWUI_COMPILE_FOR_PERF := true
+
 # Kernel
 ifeq ($(PRODUCT_VIRTUAL_AB_OTA),true)
 BOARD_BOOT_HEADER_VERSION := 3
