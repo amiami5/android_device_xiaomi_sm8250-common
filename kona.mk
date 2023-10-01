@@ -318,6 +318,7 @@ PRODUCT_PACKAGES += \
     init.mi.thermal.sh
 
 PRODUCT_PACKAGES += \
+    fstab.zram \
     init.qcom.power.rc \
     init.qcom.rc \
     init.pipa.rc \
