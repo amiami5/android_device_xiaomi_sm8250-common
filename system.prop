@@ -54,6 +54,9 @@ vendor.wfdservice64=enable
 ro.vendor.dfps.enable=false
 ro.vendor.smart_dfps.enable=false
 
+# Logs
+persist.log.tag.OpenGLRenderer=S
+
 # RIL Powersaving
 persist.radio.add_power_save=1
 pm.sleep_mode=1
