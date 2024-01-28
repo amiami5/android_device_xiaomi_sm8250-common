@@ -250,7 +250,25 @@ PRODUCT_PACKAGES += \
 
 # Logging
 SPAMMY_LOG_TAGS := \
-    SensorService
+     MiStcImpl \
+     SDM \
+     SDM-histogram \
+     SensorService \
+     SRE \
+     WifiHAL \
+     cnss-daemon \
+     libcitsensorservice@2.0-impl \
+     libsensor-displayalgo \
+     libsensor-parseRGB \
+     libsensor-ssccalapi \
+     sensors \
+     vendor.qti.hardware.display.composer-service \
+     vendor.xiaomi.sensor.citsensorservice@2.0-service
+
+ ifneq ($(TARGET_BUILD_VARIANT),eng)
+ PRODUCT_VENDOR_PROPERTIES += \
+     $(foreach tag,$(SPAMMY_LOG_TAGS),log.tag.$(tag)=E)
+ endif
 
 # Media configs
 PRODUCT_PACKAGES += \
