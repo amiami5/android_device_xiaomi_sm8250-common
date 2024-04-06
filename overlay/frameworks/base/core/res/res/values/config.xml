@@ -275,4 +275,9 @@
     <!-- Allow the gesture to double tap the power button twice to start the camera while the device
          is non-interactive. -->
     <bool name="config_cameraDoubleTapPowerGestureEnabled">false</bool>
+    
+    <!-- The list of package IDs that are allowed to skip camera high frame rate checks. -->
+    <string-array name="config_cameraHFRPrivAppList" translatable="false">
+        <item>com.android.camera</item>
+    </string-array>
 </resources>
