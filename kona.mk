@@ -504,6 +504,11 @@ PRODUCT_COPY_FILES += \
 # Signing
 include vendor/lineage-priv/keys/keys.mk
 
+# Touch
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.vendor.touchfeature.type=43
+
+
 # Wi-Fi Display
 PRODUCT_PACKAGES += \
     libnl \
