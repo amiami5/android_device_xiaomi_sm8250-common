@@ -133,4 +133,3 @@ genfscon sysfs /devices/platform/soc/soc:goodix_fp/wakeup                       
 genfscon sysfs /devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify/wakeup                                                             u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:oem_rf_cable/wakeup                                                                                       u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,ipa_uc/wakeup                                                                                        u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/virtual/input/input5/wakeup85                                                                                              u:object_r:sysfs_wakeup:s0
