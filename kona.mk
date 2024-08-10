@@ -529,6 +529,14 @@ PRODUCT_COPY_FILES += \
 # Signing
 include vendor/lineage-priv/keys/keys.mk
 
+# Wi-Fi Display
+PRODUCT_PACKAGES += \
+    android.media.audio.common.types-V2-cpp \
+    libnl \
+    libpng.vendor \
+    libwfdaac_vendor \
+    vendor.qti.hardware.display.config-V5-ndk
+
 # QPR3 Camera FIX
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/vendor/lib64/libutilscallstack.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libutilscallstack.so \
