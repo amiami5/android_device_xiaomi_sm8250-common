@@ -66,6 +66,8 @@ function blob_fixup() {
     case "${1}" in
         vendor/lib/libstagefright_soft_ac4dec.so | vendor/lib/libstagefright_soft_ddpdec.so | vendor/lib64/libdlbdsservice.so)
             "${PATCHELF}" --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
+        vendor/etc/init/init.mi_thermald.rc)
+            sed -i "/seclabel u:r:mi_thermald:s0/d" "${2}"
             ;;
         vendor/lib64/libril-qc-hal-qmi.so)
             sed -i 's|ro.product.vendor.device|ro.vendor.radio.midevice|g' "${2}"
