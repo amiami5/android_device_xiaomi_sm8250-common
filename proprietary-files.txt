@@ -454,12 +454,11 @@ vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 
 # Media configs
-odm/etc/media_profiles_V1_0.xml
 vendor/etc/media_codecs_kona.xml
 vendor/etc/media_codecs_kona_vendor.xml
 vendor/etc/media_codecs_performance_kona.xml
 vendor/etc/media_codecs_system_default.xml
-vendor/etc/media_profiles_kona.xml
+vendor/etc/media_profiles_kona.xml:vendor/etc/media_profiles_V1_0.xml
 vendor/etc/system_properties.xml
 
 # Mink-Lowi Interface daemon
