@@ -204,6 +204,10 @@ persist.vendor.hvdcp_opti.disallowed=1
 # Keystore
 ro.hardware.keystore_desede=true
 
+# Media
+media.stagefright.thumbnail.prefer_hw_codecs=true
+vendor.media.omx=0
+
 # NFC
 ro.camera.notify_nfc=1
 
