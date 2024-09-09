@@ -143,6 +143,7 @@ endif
 
 # Device-specific settings
 PRODUCT_PACKAGES += \
+    XiaomiDolby \
     XiaomiParts
 
 # Do not generate libartd.
