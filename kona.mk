@@ -340,7 +340,7 @@ PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
 
 # NFC
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     android.hardware.nfc-service.nxp \
     com.android.nfc_extras \
     libchrome.vendor \
@@ -348,10 +348,10 @@ PRODUCT_PACKAGES += \
     SecureElement \
     Tag
 
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.2.vendor
 
-#PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_nfc/android.hardware.nfc.ese.xml \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_nfc/android.hardware.nfc.hce.xml \
     frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_nfc/android.hardware.nfc.hcef.xml \
