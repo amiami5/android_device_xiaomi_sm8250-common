@@ -211,7 +211,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@4.0.vendor
 
 # Dolby
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     XiaomiDolby
 
 # DRM
