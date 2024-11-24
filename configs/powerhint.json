@@ -369,7 +369,7 @@
       "PowerHint": "INTERACTION",
       "Node": "GPUMinFreq",
       "Duration": 0,
-      "Value": "3"
+      "Value": "1516800"
     },
     {
       "PowerHint": "INTERACTION",
