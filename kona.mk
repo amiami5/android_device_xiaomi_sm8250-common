@@ -81,6 +81,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
+
+PRODUCT_PACKAGES += \
+    OpenDeltaOverlayKona
 endif
 
 # Audio
