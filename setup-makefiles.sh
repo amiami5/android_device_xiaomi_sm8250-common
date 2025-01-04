@@ -73,8 +73,6 @@ write_makefiles "${MY_DIR}/proprietary-files.txt" true
 # Exclude blobs from tablet builds
 printf '\n%s\n' 'ifneq ($(TARGET_IS_TABLET),true)' >> "$PRODUCTMK"
 
-write_makefiles "${MY_DIR}/proprietary-files-phone.txt" true
-
 printf '%s\n' 'endif' >> "$PRODUCTMK"
 
 # Finish
