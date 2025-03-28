@@ -114,15 +114,6 @@ function blob_fixup() {
         *)
             return 1
             ;;
-       vendor/lib/c2.dolby.avc.dec.so | vendor/lib/c2.dolby.avc.sec.dec.so | vendor/lib/c2.dolby.hevc.dec.so | vendor/lib/c2.dolby.hevc.sec.dec.so)
-            "${PATCHELF}" --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
-            ;;
-       vendor/bin/hw/dolbycodec2 | vendor/bin/hw/vendor.qti.media.c2@1.0-service)     
-            "${PATCHELF}" --add-needed "libstagefright_foundation-v33.so" "${2}"
-            ;;
-        vendor/lib/c2.dolby.client.so)
-            "${PATCHELF}" --add-needed "libcodec2_hidl_shim.so" "${2}"
-            ;;
     esac
 
     return 0
