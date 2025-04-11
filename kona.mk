@@ -144,7 +144,8 @@ endif
 # Device-specific settings
 PRODUCT_PACKAGES += \
     XiaomiDolby \
-    XiaomiParts
+    XiaomiParts \
+    DSPVolumeSynchronizer
 
 # Do not generate libartd.
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
