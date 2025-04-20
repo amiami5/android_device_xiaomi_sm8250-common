@@ -31,5 +31,9 @@ persist.vendor.radio.report_codec=1
 # WFD
 vendor.wfdservice64=enable
 
+# Thermals
+ro.vendor.dfps.enable=false
+ro.vendor.smart_dfps.enable=false
+
 # Zygote
 persist.device_config.runtime_native.usap_pool_enabled=true
