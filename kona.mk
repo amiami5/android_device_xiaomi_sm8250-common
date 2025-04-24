@@ -262,6 +262,8 @@ SPAMMY_LOG_TAGS := \
      libsensor-parseRGB \
      libsensor-ssccalapi \
      sensors \
+     TextView \
+     PerformanceBooster \
      vendor.qti.hardware.display.composer-service \
      vendor.xiaomi.sensor.citsensorservice@2.0-service
 
