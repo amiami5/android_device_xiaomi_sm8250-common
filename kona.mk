@@ -440,7 +440,8 @@ PRODUCT_PACKAGES += \
     NcmTetheringOverlay \
     WifiResCommon \
     wpa_supplicant \
-    wpa_supplicant.conf
+    wpa_supplicant.conf \
+    libwpa_client
 
 PRODUCT_PACKAGES += \
     firmware_WCNSS_qcom_cfg.ini_symlink \
