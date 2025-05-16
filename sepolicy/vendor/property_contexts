@@ -64,6 +64,9 @@ ro.vendor.ril                                                                   
 vendor.invn.hal.                                                                                    u:object_r:vendor_sensors_prop:s0
 persist.vendor.sensor.                                                                              u:object_r:vendor_sensors_prop:s0
 
+# WFD
+persist.vendor.setWFDInfo.               							    u:object_r:vendor_wfd_sys_debug_prop:s0
+
 # Thermal
 persist.vendor.sys.thermal.config                                                                   u:object_r:vendor_thermal_normal_prop:s0
 vendor.sys.thermal.                                                                                 u:object_r:vendor_thermal_normal_prop:s0
