@@ -138,6 +138,7 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml
 
 # Camera
+$(call soong_config_set,camera,override_format_from_reserved,true)
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64
@@ -250,6 +251,9 @@ PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
 $(call soong_config_set,lineage_health,charging_control_supports_bypass,false)
+
+# Libinit
+$(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):init_xiaomi_kona)
 
 # Media configs
 PRODUCT_PACKAGES += \
