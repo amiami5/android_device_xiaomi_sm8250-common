@@ -315,7 +315,9 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
+ifneq ($(TARGET_IS_TABLET),true)
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += $(LOCAL_PATH)/overlay/packages/apps/CarrierConfig
+endif
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
