@@ -240,6 +240,9 @@ vendor.power.pasr.enabled=false
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
+# Power hal
+vendor.powerhal.disp.idle_support=true
+
 # Seamless transfer
 sys.fflag.override.settings_seamless_transfer=true
 
