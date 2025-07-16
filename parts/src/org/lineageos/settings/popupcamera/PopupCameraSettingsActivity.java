@@ -1,5 +1,6 @@
 /*
- * Copyright (C) 2020 Paranoid Android
+ * Copyright (C) 2015-2016 The CyanogenMod Project
+ *               2017 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,21 +15,23 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.speaker;
+package org.lineageos.settings.popupcamera;
 
 import android.os.Bundle;
+import android.preference.PreferenceActivity;
 
-import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
+public class PopupCameraSettingsActivity extends PreferenceActivity {
 
-public class ClearSpeakerActivity extends CollapsingToolbarBaseActivity {
-
-    private static final String TAG_CLEARSPEAKER = "clearspeaker";
+    private static final String TAG_POPUPCAMERA = "popupcamera";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getFragmentManager().beginTransaction().replace(com.android.settingslib.collapsingtoolbar.R.id.content_frame,
-                new ClearSpeakerFragment(), TAG_CLEARSPEAKER).commit();
+        getFragmentManager()
+                .beginTransaction()
+                .replace(android.R.id.content, new PopupCameraSettingsFragment(),
+                        TAG_POPUPCAMERA)
+                .commit();
     }
 }

@@ -1,3 +1,7 @@
+# Axion Tunings
+genfscon proc /sys/vm/dirty_writeback_centisecs                                                    u:object_r:proc_dirty:s0
+genfscon proc /sys/vm/vfs_cache_pressure                                                           u:object_r:proc_drop_caches:s0
+
 # DSP
 genfscon sysfs /kernel/boot_cdsp/boot                                                               u:object_r:sysfs_msm_boot:s0
 
@@ -11,9 +15,6 @@ genfscon sysfs /devices/platform/soc/soc:fingerprint_goodix                     
 
 # FOD
 genfscon sysfs /devices/virtual/touch/tp_dev/fod_status                                             u:object_r:vendor_sysfs_graphics:s0
-
-# FPS Info
-genfscon sysfs /class/drm/sde-crtc-0/measured_fps                               u:object_r:vendor_sysfs_graphics:s0
 
 # Health
 genfscon sysfs /class/power_supply/battery/capacity                                                 u:object_r:sysfs_battery_supply:s0
@@ -54,28 +55,14 @@ genfscon sysfs /devices/platform/soc/soc:maxim_ds28e16_slave/power_supply/batt_v
 genfscon sysfs /bus/iio/devices                                                                     u:object_r:sysfs_iio:s0
 
 # LED
-genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm8150l@5:qcom,leds@d300/leds/flashlight/brightness   u:object_r:sysfs_leds:s0
-genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm8150l@5:qcom,leds@d300/leds/led:torch_0/brightness  u:object_r:sysfs_leds:s0
-genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm8150l@5:qcom,leds@d300/leds/led:torch_1/brightness  u:object_r:sysfs_leds:s0
-genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm8150l@5:qcom,leds@d300/leds/led:switch_0/brightness u:object_r:sysfs_leds:s0
-genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm8150l@5:qcom,leds@d300/leds/led:switch_1/brightness u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d300/leds/flashlight/brightness   u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d300/leds/led:torch_0/brightness  u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d300/leds/led:torch_1/brightness  u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d300/leds/led:switch_0/brightness u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d300/leds/led:switch_1/brightness u:object_r:sysfs_leds:s0
 
 # RTC
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm8150@0:qcom,pm8150_rtc/rtc  u:object_r:sysfs_rtc:s0
-
-# SSR
-genfscon sysfs /devices/platform/soc/soc:qcom,ipa_fws/subsys0/restart_level              u:object_r:sysfs_ssr_toggle:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,ipa_uc/subsys1/restart_level               u:object_r:sysfs_ssr_toggle:s0
-genfscon sysfs /devices/platform/soc/17300000.qcom,lpass/subsys2/restart_level           u:object_r:sysfs_ssr_toggle:s0
-genfscon sysfs /devices/platform/soc/8300000.qcom,turing/subsys3/restart_level           u:object_r:sysfs_ssr_toggle:s0
-genfscon sysfs /devices/platform/soc/aab0000.qcom,venus/subsys4/restart_level            u:object_r:sysfs_ssr_toggle:s0
-genfscon sysfs /devices/platform/soc/188101c.qcom,spss/subsys5/restart_level             u:object_r:sysfs_ssr_toggle:s0
-genfscon sysfs /devices/platform/soc/abb0000.qcom,cvpss/subsys6/restart_level            u:object_r:sysfs_ssr_toggle:s0
-genfscon sysfs /devices/platform/soc/5c00000.qcom,ssc/subsys7/restart_level              u:object_r:sysfs_ssr_toggle:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,kgsl-hyp/subsys8/restart_level             u:object_r:sysfs_ssr_toggle:s0
-genfscon sysfs /devices/platform/soc/b0000000.qcom,cnss-qca6390/subsys9/restart_level    u:object_r:sysfs_ssr_toggle:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,mdm0/subsys10/restart_level                u:object_r:sysfs_ssr_toggle:s0
-genfscon sysfs /devices/platform/soc/9800000.qcom,npu/subsys11/restart_level             u:object_r:sysfs_ssr_toggle:s0
 
 # Touchpanel
 genfscon sysfs /touchpanel                                                                          u:object_r:sysfs_touchpanel:s0
@@ -117,8 +104,6 @@ genfscon sysfs /devices/platform/soc/888000.i2c/i2c-5/5-0055/power_supply/lionse
 genfscon sysfs /devices/platform/soc/888000.i2c/i2c-5/5-0061/power_supply/rx1619/wakeup                                                            u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/888000.i2c/i2c-5/5-0061/wakeup                                                                                u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/888000.i2c/i2c-5/5-0067/wakeup                                                                                u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/888000.i2c/i2c-6/6-0066/power_supply/bq2597x-standalone/wakeup41                                              u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/888000.i2c/i2c-6/6-0066/wakeup                                                                                u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/888000.i2c/i2c-8/8-0026/wakeup                                                                                u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/888000.i2c/i2c-8/8-0055/wakeup                                                                                u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/88c000.i2c/i2c-6/6-002a/power_supply/cp_wdog/wakeup                                                           u:object_r:sysfs_wakeup:s0
@@ -131,11 +116,9 @@ genfscon sysfs /devices/platform/soc/984000.i2c/i2c-0/0-0028/wakeup             
 genfscon sysfs /devices/platform/soc/984000.i2c/i2c-5/5-0018/wakeup                                                                                u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/984000.i2c/i2c-5/5-0019/wakeup                                                                                u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/984000.i2c/i2c-5/5-0028/wakeup                                                                                u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/988000.i2c/i2c-1/1-004c/wakeup                                                                                u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/990000.spi/spi_master/spi1/spi1.0/wakeup                                                                      u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/994000.i2c/i2c-7/7-003b/994000.i2c:op,wlchg_rx@3b:idt,p9415/wakeup                                            u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/994000.i2c/i2c-7/7-0066/wakeup                                                                                u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/a80000.i2c/i2c-3/3-0041/power_supply/fuda/wakeup40                                                            u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/a84000.i2c/i2c-2/2-0028/wakeup                                                                                u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/a84000.i2c/i2c-3/3-0028/wakeup                                                                                u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/a8c000.i2c/i2c-2/2-0051/power_supply/bq2597x-slave/wakeup                                                     u:object_r:sysfs_wakeup:s0
@@ -147,16 +130,9 @@ genfscon sysfs /devices/platform/soc/a8c000.i2c/i2c-3/3-005a/wakeup             
 genfscon sysfs /devices/platform/soc/a94000.i2c/i2c-3/3-0049/wakeup                                                                                u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/a94000.i2c/i2c-4/4-0038/wakeup                                                                                u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/a94000.i2c/i2c-4/4-0048/wakeup                                                                                u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm8150@0:qcom,pm8150_rtc/wakeup                      u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/power_supply/wireless/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,usb-pdphy@1700/usbpd/usbpd0/otg_default/wakeup u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qpnp,fg/wakeup                             u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:vadc@3100/iio:device1/wakeup               u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/c80000.i2c/i2c-4/4-003b/power_supply/idt/wakeup                                                               u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/c80000.i2c/i2c-4/4-003b/wakeup                                                                                u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/wakeup                                                                                    u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/soc:fingerprint_goodix/wakeup                                                                                 u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/soc:goodix_fp/wakeup                                                                                          u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify/wakeup                                                             u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/soc:maxim_ds28e16_slave/power_supply/batt_verify_slave/wakeup                                                 u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/soc:oem_rf_cable/wakeup                                                                                       u:object_r:sysfs_wakeup:s0

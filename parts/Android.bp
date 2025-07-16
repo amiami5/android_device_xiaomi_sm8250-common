@@ -16,22 +16,10 @@ android_app {
 
     static_libs: [
         "org.lineageos.settings.resources",
-        "SettingsLib",
-        "//hardware/xiaomi:vendor.xiaomi.hardware.touchfeature-V1.0-java",
+        "vendor.xiaomi.hardware.motor-V1.0-java",
     ],
 
     optimize: {
         proguard_flags_files: ["proguard.flags"],
     },
-
-    required: [
-        "privapp_whitelist_org.lineageos.settings.xml",
-    ],
-}
-
-prebuilt_etc {
-    name: "privapp_whitelist_org.lineageos.settings.xml",
-    src: "permissions/privapp_whitelist_org.lineageos.settings.xml",
-    sub_dir: "permissions",
-    system_ext_specific: true,
 }
