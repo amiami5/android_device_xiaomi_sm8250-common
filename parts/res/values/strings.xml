@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2020-2026 The LineageOS Project
+     Copyright (C) 2020-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -109,14 +109,6 @@
     <string name="saturation_title">Display Saturation</string>
     <string name="saturation_summary">Control the saturation level of the display</string>
     <string name="saturation_footer_summary">Changing the color mode in display settings will override the saturation level, requiring it to be reapplied.</string>
-
-    <!-- Bypass Charging -->
-    <string name="bypass_charging_title">Bypass Charging</string>
-    <string name="bypass_charging_summary">Suspend battery input to run directly from the charger</string>
-    <string name="bypass_charging_status_on">Status: Active &#8212; Battery input is suspended</string>
-    <string name="bypass_charging_status_off">Status: Inactive &#8212; Charging normally</string>
-    <string name="bypass_charging_footer">When enabled, power flows directly from the charger to the device, bypassing the battery. The battery will not charge while this is active.
-    Disabling it returns to normal charging. The feature resets automatically on reboot.</string>
 
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>

@@ -5,7 +5,4 @@ allow init same_process_hal_file:file execute;
 
 allow init sysfs_battery_supply:file rw_file_perms;
 
-# Bypass Charging
-allow init vendor_sysfs_battery_supply:file rw_file_perms;
-
 set_prop(init, vendor_fingerprint_prop)

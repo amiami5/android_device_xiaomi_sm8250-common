@@ -195,35 +195,6 @@
             android:name=".display.ColorModeService"
             android:permission="ColorModeService">
         </service>
-        
-        <!-- Bypass Charging -->
-        <activity
-            android:name=".bypasscharging.BypassChargingActivity"
-            android:exported="false"
-            android:label="@string/bypass_charging_title"
-            android:theme="@style/Theme.SubSettingsBase">
-            <intent-filter>
-                <action android:name="com.android.settings.action.IA_SETTINGS" />
-            </intent-filter>
-            <meta-data
-                android:name="com.android.settings.category"
-                android:value="com.android.settings.category.ia.battery" />
-            <meta-data
-                android:name="com.android.settings.summary"
-                android:resource="@string/bypass_charging_summary" />
-        </activity>
-        
-         <!-- Bypass Charging QS Tile -->
-        <service
-            android:name=".bypasscharging.BypassChargingTile"
-            android:exported="true"
-            android:icon="@drawable/ic_bypass_charging_tile"
-            android:label="@string/bypass_charging_title"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
-            <intent-filter>
-                <action android:name="android.service.quicksettings.action.QS_TILE" />
-            </intent-filter>
-        </service>
 
     </application>
 
