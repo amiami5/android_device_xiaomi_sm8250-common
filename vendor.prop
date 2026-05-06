@@ -1,3 +1,7 @@
+# Activity Manager
+persist.device_config.activity_manager.max_cached_processes=64
+persist.device_config.activity_manager.use_compaction=true
+
 # Audio
 aaudio.hw_burst_min_usec=2000
 aaudio.mmap_exclusive_policy=2
