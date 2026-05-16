@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (C) 2020 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,14 +15,13 @@
  */
 package org.lineageos.settings.thermal;
 
-import android.app.ActionBar;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 
-import androidx.preference.PreferenceFragment;
+import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
 
 import com.android.settingslib.widget.MainSwitchPreference;
@@ -30,7 +29,7 @@ import com.android.settingslib.widget.MainSwitchPreference;
 import org.lineageos.settings.R;
 import org.lineageos.settings.widget.SeekBarPreference;
 
-public class TouchSettingsFragment extends PreferenceFragment
+public class TouchSettingsFragment extends PreferenceFragmentCompat
         implements SharedPreferences.OnSharedPreferenceChangeListener, OnCheckedChangeListener {
 
     private SharedPreferences mSharedPrefs;
@@ -44,23 +43,22 @@ public class TouchSettingsFragment extends PreferenceFragment
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         addPreferencesFromResource(R.xml.touch_settings);
-        mSharedPrefs = PreferenceManager.getDefaultSharedPreferences(getContext());
+        mSharedPrefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
 
         Bundle bundle = getArguments();
-        String appName = "";
         if (bundle != null) {
-            appName = bundle.getString("appName", "");
             packageName = bundle.getString("packageName", "");
         }
 
-        getActivity().setTitle(getResources().getString(R.string.touch_control_title));
+        requireActivity().setTitle(R.string.touch_control_title);
+        setHasOptionsMenu(true);
 
-        mGameMode = (MainSwitchPreference) findPreference(Constants.PREF_TOUCH_GAME_MODE);
+        mGameMode = findPreference(Constants.PREF_TOUCH_GAME_MODE);
         mGameMode.addOnSwitchChangeListener(this);
 
-        mTouchResistant = (SeekBarPreference) findPreference(Constants.PREF_TOUCH_RESISTANT);
-        mTouchResponse = (SeekBarPreference) findPreference(Constants.PREF_TOUCH_RESPONSE);
-        mTouchSensitivity = (SeekBarPreference) findPreference(Constants.PREF_TOUCH_SENSITIVITY);
+        mTouchResistant = findPreference(Constants.PREF_TOUCH_RESISTANT);
+        mTouchResponse = findPreference(Constants.PREF_TOUCH_RESPONSE);
+        mTouchSensitivity = findPreference(Constants.PREF_TOUCH_SENSITIVITY);
         updateDefaults();
     }
 
@@ -79,7 +77,7 @@ public class TouchSettingsFragment extends PreferenceFragment
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
-            getActivity().onBackPressed();
+            requireActivity().onBackPressed();
             return true;
         }
         return false;
@@ -111,11 +109,9 @@ public class TouchSettingsFragment extends PreferenceFragment
         String[] values = getTouchValues().split(",");
         boolean modeEnabled = Integer.parseInt(values[Constants.TOUCH_GAME_MODE]) == 1;
         mGameMode.setChecked(modeEnabled);
-
         mTouchSensitivity.setEnabled(modeEnabled);
         mTouchResponse.setEnabled(modeEnabled);
         mTouchResistant.setEnabled(modeEnabled);
-
         mTouchResponse.setProgress(Integer.parseInt(values[Constants.TOUCH_RESPONSE]));
         mTouchSensitivity.setProgress(Integer.parseInt(values[Constants.TOUCH_SENSITIVITY]));
         mTouchResistant.setProgress(Integer.parseInt(values[Constants.TOUCH_RESISTANT]));
@@ -137,8 +133,10 @@ public class TouchSettingsFragment extends PreferenceFragment
     public void updateTouchModes(int value, int mode) {
         String[] values = getTouchValues().split(",");
         values[mode] = String.valueOf(value);
-        String finalValues = values[Constants.TOUCH_GAME_MODE] + "," + values[Constants.TOUCH_RESPONSE] + ","
-                + values[Constants.TOUCH_SENSITIVITY] + "," + values[Constants.TOUCH_RESISTANT];
+        String finalValues = values[Constants.TOUCH_GAME_MODE] + ","
+                + values[Constants.TOUCH_RESPONSE] + ","
+                + values[Constants.TOUCH_SENSITIVITY] + ","
+                + values[Constants.TOUCH_RESISTANT];
         writeTouchValues(finalValues);
     }
 }
