@@ -99,16 +99,13 @@ BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
-TARGET_KERNEL_NO_GCC := true
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sm8250
 TARGET_KERNEL_CONFIG := \
-    vendor/kona-perf_defconfig \
-    vendor/debugfs.config \
-    vendor/xiaomi/sm8250-common.config
+    vendor/pipa_defconfig
 
-# Kernel Clang Flags
-KERNEL_CC := CC=clang
-override KERNEL_TOOLCHAIN_PREFIX_arm := arm-linux-android-
+# Toolchains for kernel
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_CLANG_PATH := /home/ami/toolchains/llvm-clang
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
