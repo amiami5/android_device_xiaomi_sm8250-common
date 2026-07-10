@@ -105,7 +105,7 @@ TARGET_KERNEL_CONFIG := \
 
 # Toolchains for kernel
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_PATH := /home/ami/toolchains/llvm-clang
+TARGET_KERNEL_CLANG_PATH := /home/amikk/toolchains/llvm-clang
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
