@@ -247,7 +247,6 @@ $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):init_xiaomi_kona
 
 # Input
 PRODUCT_PACKAGES += \
-    Xiaomi_Smart_Pen_Keyboard.kl \
     kona-mtp-snd-card_Button_Jack.kl \
     uinput-fortsense.kl \
     uinput-fpc.kl \
