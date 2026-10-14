@@ -14,3 +14,6 @@ set_prop(vendor_init, vendor_fingerprint_prop)
 
 # schedtune
 allow vendor_init device:file { create read write };
+
+# IMS log props set from vendor.prop
+set_prop(vendor_init, vendor_ims_prop)
