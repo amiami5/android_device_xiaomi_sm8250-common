@@ -47,6 +47,12 @@ sh_binary {
     vendor: true,
 }
 
+sh_binary {
+    name: "zram_recompress.sh",
+    src: "bin/zram_recompress.sh",
+    vendor: true,
+}
+
 // fstab
 soong_config_module_type {
     name: "xiaomi_kona_rootdir_prebuilt_etc",
