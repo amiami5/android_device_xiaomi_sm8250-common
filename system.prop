@@ -44,3 +44,7 @@ persist.vendor.radio.report_codec=1
 
 # Zygote
 persist.device_config.runtime_native.usap_pool_enabled=true
+
+# Activity Manager
+persist.device_config.activity_manager.max_cached_processes=64
+persist.device_config.activity_manager.use_compaction=true
