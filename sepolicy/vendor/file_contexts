@@ -84,3 +84,6 @@
 
 # zram recompress
 /vendor/bin/zram_recompress\.sh                                                                     u:object_r:vendor_zram_recompress_exec:s0
+
+# ntsync
+/dev/ntsync                                                                                             u:object_r:ntsync_device:s0
