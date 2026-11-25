@@ -30,6 +30,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libcrypto_shim.so'),
     'vendor/lib64/mediadrm/libwvdrmengine.so': blob_fixup()
         .add_needed('libcrypto_shim.so'),
+    ('vendor/lib/libC2D2.so', 'vendor/lib/libc2d30_bltlib.so'): blob_fixup()
+        .add_needed('libgsl_c2d_shim.so'),
 }  # fmt: skip
 
 
@@ -48,6 +50,7 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 namespace_imports = [
+    'device/xiaomi/sm8250-common',
     'hardware/qcom-caf/sm8250',
     'hardware/qcom-caf/wlan',
     'hardware/xiaomi',
