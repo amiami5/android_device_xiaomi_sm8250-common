@@ -176,6 +176,7 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
+    libgsl_c2d_shim \
     vendor.qti.hardware.display.composer-service
 
 PRODUCT_PACKAGES += \
